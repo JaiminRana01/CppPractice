@@ -3,6 +3,7 @@ using namespace std;
 
 int main()
 {
+
     int n;
     cin >> n;
 
@@ -17,12 +18,11 @@ int main()
     {
         int current = arr[i];
         int j = i - 1;
-        while (arr[j] > current)
+        while (arr[j] > current && j >= 0)
         {
             arr[j + 1] = arr[j];
             j--;
         }
-
         arr[j + 1] = current;
     }
 
@@ -30,7 +30,6 @@ int main()
     {
         cout << arr[i] << " ";
     }
-    cout << endl;
 
     return 0;
 }
